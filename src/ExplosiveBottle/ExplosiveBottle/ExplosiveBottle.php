@@ -12,7 +12,7 @@ use pocketmine\level\Position;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\ProjectileHitEvent;
 
-class Main extends PluginBase implements Listener {
+class ExplosiveBottle extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
