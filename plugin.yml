@@ -1,0 +1,6 @@
+name: ExplosiveBottle
+main: ExplosiveBottle\ExplosiveBottle\ExplosiveBottle
+version: "1.0"
+api: [2.0.0]
+description: Throw Experience Bottle's And Make An Explosion!
+author: XShockinFireX
