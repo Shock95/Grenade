@@ -1,7 +1,5 @@
 <?php
-
 namespace ExplosiveBottle\ExplosiveBottle;
-
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
@@ -11,7 +9,6 @@ use pocketmine\level\Explosion;
 use pocketmine\level\Position;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\ProjectileHitEvent;
-
 class ExplosiveBottle extends PluginBase implements Listener {
 	
 	public function onEnable() {
@@ -30,9 +27,13 @@ class ExplosiveBottle extends PluginBase implements Listener {
 			$level = $entity->getLevel();
 			$thePosition = new Position($theX, $theY, $theZ, $level);
 			$theExplosion = new Explosion($thePosition, 5, NULL);
-			$theExplosion->explode();
-            $explosion->explodeB();
-			$level->remove($entity);
-		}
-	}
+			$theExplosion->explodeB();
+            $impact = 1;
+            $damage = 1;
+            
+    }
+    }
 }
+    
+          
+        
