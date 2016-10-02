@@ -23,7 +23,7 @@ class ExplosiveBottle extends PluginBase implements Listener {
 		$entity = $event->getEntity();
 		if($entity instanceof ThrownExpBottle) {
 			$pos = new Position($entity->getX(), $entity->getY(), $entity->getZ(), $entity->getLevel());
-			$explosion = new Explosion($pos, 5, NULL);
+			$explosion = new Explosion($pos, $this->getConfig()->get("explode-radius"), NULL, false);
 			if($this->getConfig()->get("explode-blocks")) {
 				$explosion->explodeB();
 			} else {
