@@ -1,1 +1,8 @@
+---
+# Radius of the explosion.
+explosion-radius: 5
+# Explode blocks on explosion, set as false on default.
 explode-blocks: false
+# Drop items on the explosion if explode-blocks is set to true, set as false on default.
+drop-items: false
+...
