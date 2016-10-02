@@ -15,7 +15,7 @@ class Grenade extends PluginBase implements Listener {
 	
     public function onEnable() {
 	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-	$this->getLogger()->info(TextFormat::GREEN. "ExplosiveBottle has been enabled.");
+	$this->getLogger()->info(TextFormat::GREEN. "Grenade by XShockinFireX has been enabled.");
 	$this->saveDefaultConfig();
     }
 	
