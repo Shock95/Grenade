@@ -1,4 +1,4 @@
-ExplosiveBottle:
-
-Throw Experience Bottle's And Make An Explosion!
+# Grenade - PocketMine-MP
+___
+Throw experience bottles to create an explosion!
 
