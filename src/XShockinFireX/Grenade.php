@@ -14,20 +14,20 @@ use pocketmine\event\entity\ProjectileHitEvent;
 class Grenade extends PluginBase implements Listener {
 	
     public function onEnable() {
-		    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-		    $this->getLogger()->info(TextFormat::GREEN. "ExplosiveBottle has been enabled.");
-		    $this->saveDefaultConfig();
-	  }
+	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	$this->getLogger()->info(TextFormat::GREEN. "ExplosiveBottle has been enabled.");
+	$this->saveDefaultConfig();
+    }
 	
-	  public function onProjectileHit(ProjectileHitEvent $event) {
-		    $entity = $event->getEntity();
-		    if($entity instanceof ThrownExpBottle) {
-			      $pos = new Position($entity->getX(), $entity->getY(), $entity->getZ(), $entity->getLevel());
-			      $explosion = new Explosion($pos, $this->getConfig()->get("explode-radius"), NULL, $this->getConfig->get("drop-items"));
-			      if($this->getConfig()->get("explode-blocks")) {
-				        $explosion->explodeB();
-			      } else {
-				        $explosion->explodeA();
+    public function onProjectileHit(ProjectileHitEvent $event) {
+	$entity = $event->getEntity();
+	if($entity instanceof ThrownExpBottle) {
+	    $pos = new Position($entity->getX(), $entity->getY(), $entity->getZ(), $entity->getLevel());
+	    $explosion = new Explosion($pos, $this->getConfig()->get("explode-radius"), NULL, $this->getConfig->get("drop-items"));
+	    if($this->getConfig()->get("explode-blocks")) {
+	        $explosion->explodeB();
+	    } else {
+		$explosion->explodeA();
             }
         }
     }
