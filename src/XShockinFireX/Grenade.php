@@ -1,5 +1,5 @@
 <?php
-namespace XShockinFireX\Grenade;
+namespace XShockinFireX;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
